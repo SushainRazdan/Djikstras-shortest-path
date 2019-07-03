@@ -25,26 +25,28 @@ public:
         uniform_real_distribution<double> prob(0.0, 1.0); // range
 
         graph = new int*[vertices];
-        for (int i = 0; i < vertices; i++)
+        for (int i = 0; i < vertices; i++) {
             graph[i] = new int[vertices];
-
+        }
+        cout<<this->vertices<<endl;
         for (int i = 0; i < this->vertices; i++) {
             for (int j = 0; j < this->vertices; j++) {
                 if (i == j) graph[i][j] = 0;
                 else if (prob(e) < this->edgeDensity) {
-                    graph[i][j] = graph[j][i] = cost(e);
+                    graph[i][j] = cost(e);
+                    graph[j][i] = cost(e);
                 }
-                cout<<graph[i][j]<<' ';
+                else
+                    graph[i][j] = graph[j][i] = 0;
             }
-            cout<<endl;
         }
-        //display_graph();
+        display_graph();
     }
     void display_graph()
     {
         for (int i = 0; i < this->vertices; i++) {
             for (int j = 0; j < this->vertices; j++) {
-                cout<<graph[i][j]<<" ";
+                cout<<this->graph[i][j]<<' ';
             }
             cout<<endl;
         }
