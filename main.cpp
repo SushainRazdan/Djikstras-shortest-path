@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : Djiktra.cpp
-// Author      : D.Johnson
+// Author      : Sushain Razdan
 // Version     :
 // Copyright   :
 // Description : To calculate the average shortest path in a given graph using
