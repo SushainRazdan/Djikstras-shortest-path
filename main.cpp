@@ -107,9 +107,17 @@ public:
     {
         graph[source][dest] = graph[dest][source] = cost;
     }
+    //Get the Edge value between source and destination
     int GetEdgeValue(int source, int dest)
     {
         return graph[source][dest];
+    }
+    //Destructor to deallocate resources
+    ~Graph()
+    {
+        for (int i = 0; i < vertices; i++)
+            delete graph[i];
+        delete graph;
     }
 };
 
@@ -119,4 +127,3 @@ int main(void)
 
     return 0;
 }
-
