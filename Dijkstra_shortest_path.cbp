@@ -32,7 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="Graph.cpp" />
+		<Unit filename="PriorityQueue.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
