@@ -1,1 +1,1 @@
-# cpp_learn
+# basic algorithms
